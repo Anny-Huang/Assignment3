@@ -1,4 +1,4 @@
-/************* your name: 
+/************* your name: An-Ni Huang
 
 INSTRUCTIONS:
 Comments starting with TO-DO have been included in this file to describe the needed styling: please translate these to the appropriate CSS declarations. 
@@ -24,6 +24,7 @@ body {
 
 /* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
 
+/* Flexbox container for elements with the .flex class */
 .flex {
     display: flex;
 }
@@ -43,21 +44,25 @@ body {
         - change the cursor to pointer.
 */
 
+/* Site-wide style for first-level headings */
 h1 {
     font-size: 48px;
     align-self: center;
     margin: 0px auto;
 }   
 
+/* Site-wide style for second-level headings */
 h2 {
     font-size: 36px;
     margin-bottom: 12px;
 }
 
+/* Site-wide style for elements with the .large-text class */
 .large-text {
     font-size: 24px;
 }
 
+/* Site-wide style for elements with the .fake-button class */
 .fake-button {
     background-color: #E5AF42;
     text-align: center;
@@ -65,15 +70,18 @@ h2 {
     border: 1px solid black;
 }
 
+/* Site-wide style for all anchor tags */
 a {
     text-decoration: none;
     color: black;
 }
 
+/* Hover state for anchors in main and footer sections */
 main a:hover, footer a:hover {
     text-decoration: underline;
 }
 
+/* Hover state for .fake-button and .blue-hover elements */
 .fake-button:hover, .blue-hover:hover {
     text-decoration: underline;
     background-color: #4278e5;
@@ -91,20 +99,24 @@ main a:hover, footer a:hover {
     - the footer will be 60px tall with 26px of space around the contents, have a font-weight of 200, and the text within will be centered vertically and horizontally.
 */
 
+/* Common background color for header and footer */
 header, footer {
     background-color: #E5AF42;
 }
 
+/* Header styling */
 header {
     height: 150px;
     margin-bottom: 25px;
 }
 
+/* Header image styling */
 header img {
     width: 100px;
     margin: 25px 0px 25px 25px;
 }
 
+/* Footer styling */
 footer {
     margin-top: 50px;
     height: 60px;
@@ -113,6 +125,7 @@ footer {
     text-align: center;
 }
 
+/* Footer paragraph margin adjustment */
 footer p {
     margin: 3px 0px;
 }
@@ -127,32 +140,37 @@ footer p {
     - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
 */
 
-img {
+/* Styling for image on the index page */
+.index img {
     width: 300px;
     margin-bottom: 50px;
 }
 
+/* Set the space between image and text column */
 .index div:first-child {
     gap: 25px;
 }
 
+/* Line-height for h2 on the index page */
 .about-us h2 {
     line-height: 36px;
 }
 
+/* Paragraph spacing on the index page */
 .about-us p {
     margin-bottom: 12px;
 }
 
+/* Styling for .fake-button elements on the index page */
 .index .fake-button {
     width: 250px;
 }
 
+/* Layout adjustment for the last div(contains two fake-button) on the index page */
 .index div:last-child {
     gap: 150px;
     justify-content: center;
 }
-
 
 /************* bookings page *************/
 
@@ -168,6 +186,7 @@ img {
 
 */
 
+/* General layout for the contents of the booking-page */
 .booking-page {
     width: 600px;
     text-align: center;
@@ -175,33 +194,40 @@ img {
     margin: 0 auto;
 }
 
+/* Layout for day selector list items */
 .day-selector {
     gap:20px;
     justify-content: center;
 }
+
 .day-selector li {
     margin-bottom: 12px;
     width: 60px;
 }
 
+/* Border styling for list items and the small-button elements */
 li, .small-button {
     border: 1px solid black;
 }
 
+/* Padding for small buttons */
 .small-button{
     padding: 5px;
 }
 
+/* Margin adjustments for elements with .top-margin class */
 .top-margin {
     margin-top: 24px;
     margin-bottom: 12px;
 }
 
+/* Clear button styling */
 #clear-button {
     width: 200px;
     margin-left: 199px;
 }
 
+/* Styling for clicked elements */
 .clicked {
     background-color: #E5AF42;
 }
@@ -215,38 +241,45 @@ li, .small-button {
     - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
 */
 
+/* Layout for the main section of the .contact page */
 .contact {
     height: 420px;
     text-align: center;
 }
 
+/* Label styling for the contact form */
 label {
     width: 150px;
     text-align: right;
 }
 
+/* Input, textarea, and button styling for the contact form */
 input, textarea, #submit-button {
     font-size: 16px;
     border: 1px solid black;
     margin-bottom: 24px;
 }
 
+/* Width and line-height adjustments for input and textarea elements */
 input, textarea {
     width: 300px;
     line-height: 24px;
 } 
 
+/* Button styling on the contact page */
 #submit-button {
     font-family: 'Montserrat', sans-serif;
     width: 305.6px;
     margin-left: 174px;
 }
 
+/* Flexbox layout for form elements */
 form .flex {
     gap: 24px;
     justify-content: center;
 }
 
+/* Height adjustment for textarea elements */
 textarea {
     height: 150px;
 }
