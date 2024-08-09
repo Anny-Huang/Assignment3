@@ -20,22 +20,22 @@ const clearButton = document.getElementById("clear-button");
 
 // Add click event listeners to each day element to handle the selection process
 // Recalculate the total cost
-for (let dayElement of dayElements) {
-    dayElement.addEventListener('click', () => {
-      // Check if the day is already selected
-      if (!dayElement.classList.contains('clicked')) {
-        dayElement.classList.add('clicked');
-        daysSelectedCount++; // Increase the counter 
-      }
-      updateCost(); 
-    });
-  }
+dayElements.forEach(function(dayElement) {
+  dayElement.addEventListener('click', function() {
+    // Check if the day is already selected
+    if (!dayElement.classList.contains('clicked')) {
+      dayElement.classList.add('clicked');
+      daysSelectedCount++; // Increase the counter 
+    }
+    updateCost();
+  });
+});
 
 /********* clear days *********/
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.
 
 // Add click event listeners to the clear button to reset selection and the total cost 
-clearButton.addEventListener('click', () => {
+clearButton.addEventListener('click', function() {
     for (let dayElement of dayElements) {
       dayElement.classList.remove('clicked'); 
     }
@@ -50,7 +50,7 @@ clearButton.addEventListener('click', () => {
 // Add click event listeners to the half day button and full day button to reset daily rate
 // The selected rate is visually indicated by adding the "clicked" class
 // Recalculate the total cost 
-halfDayButton.addEventListener('click', () => {
+halfDayButton.addEventListener('click', function() {
     costPerDay = 20; 
     halfDayButton.classList.add('clicked');  
     fullDayButton.classList.remove('clicked'); 
@@ -59,7 +59,7 @@ halfDayButton.addEventListener('click', () => {
 
 // when the full-day button is clicked, the daily rate is set back to $35, the clicked class is added to "full" and removed from "half", and the total cost is recalculated.
 
-fullDayButton.addEventListener('click', () => {
+fullDayButton.addEventListener('click', function() {
     costPerDay = 35; 
     fullDayButton.classList.add('clicked');
     halfDayButton.classList.remove('clicked');
