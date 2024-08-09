@@ -50,7 +50,6 @@ clearButton.addEventListener('click', () => {
 // Add click event listeners to the half day button and full day button to reset daily rate
 // The selected rate is visually indicated by adding the "clicked" class
 // Recalculate the total cost 
-
 halfDayButton.addEventListener('click', () => {
     costPerDay = 20; 
     halfDayButton.classList.add('clicked');  
@@ -66,7 +65,6 @@ fullDayButton.addEventListener('click', () => {
     halfDayButton.classList.remove('clicked');
     updateCost(); 
   });
-
 
 /********* calculate *********/
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
